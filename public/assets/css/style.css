@@ -1,0 +1,83 @@
+.bg {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+}
+h2 {
+  color: white;
+}
+.display-3 {
+  text-align: center;
+}
+.break {
+  border: black solid 2px;
+}
+.btn-primary {
+  border-radius: 10px;
+  border-color: grey;
+  font-size: 12px;
+  font-weight: 300;
+  background: black;
+  color: white;
+}
+.order {
+  border-radius: 20px;
+  background-image: url("../img/galaxy_back_1.jpg");
+  background-size: cover;
+  text-align: center;
+  color: blue;
+  text-shadow: black 1px 1px;
+  font-weight: 600;
+  margin: 20px 20px 20px 50px;
+}
+.chaos {
+  border-radius: 20px;
+  background-image: url("../img/galaxy_back_2.jpg");
+  background-size: cover;
+  text-align: center;
+  color: red;
+  text-shadow: black 1px 1px;
+  font-weight: 600;
+  margin: 20px;
+}
+.jumbotron {
+  background: transparent;
+  color: purple;
+}
+.sub-title {
+  text-align: center;
+  color: green;
+  font-size: 12px;
+}
+.header {
+  text-align: center;
+  font-weight: 600;
+  color: yellow;
+  font-size: 22px;
+}
+li {
+  padding: 5px;
+  margin: 5px;
+  background: black;
+  color: white;
+}
+
+.label {
+  font-weight: bold;
+}
+.spawn {
+  text-align: center;
+}
+.create-update-form {
+  
+  padding: 5px;
+  background: black;
+  border-radius: 20px;
+  text-align: center;
+  margin: 20px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+
