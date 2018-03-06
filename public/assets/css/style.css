@@ -80,4 +80,8 @@ li {
   margin-bottom: 5px;
 }
 
+.html {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+}
 
