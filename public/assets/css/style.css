@@ -1,3 +1,11 @@
+html {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+}
+.full {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+}
 .bg {
   background-image: url("../img/background.jpg");
   background-size: cover;
@@ -80,8 +88,5 @@ li {
   margin-bottom: 5px;
 }
 
-.html {
-  background-image: url("../img/background.jpg");
-  background-size: cover;
-}
+
 
