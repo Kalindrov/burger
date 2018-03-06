@@ -1,38 +1,57 @@
-<h1>Burgers</h1>
-
-<h2>Burgers that are not devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burgers-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that are devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burgers-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="bu">Burger Name:</label>
-    <input type="text" id="bu" name="name">
+<div class="container bg">
+	<div class="jumbotron">
+  <h1 class="display-3">DESTROYER OF WORLDS</h1>
+  <p class="sub-title">You are the most powerful being in all the universe and with a simple click, worlds are destroyed!</p>
+  <p class="sub-title">Choose the fate of galaxies, to be destroyed or saved.</p>
+  <hr class="my-2">
+  <h2 class="header">MAKE YOUR CHOICE</h2>
+  <hr class="my-4">
+  <div class="row galaxy-bar">
+    <div class="col-5 order">
+			<h2>Galaxies in Order</h2>
+			<hr class="break">
+			  {{#each burgers}}
+			    {{#unless this.devoured}}
+			      	{{!-- {{this.id}}  --}}
+              {{this.burger_name}}
+			        <form action="/{{this.id}}?_method=PUT" method="POST">
+			          <input type="hidden" name="devoured" value="true">
+			          <button class="btn-primary" type="submit">Destroy</button>
+			        </form>
+			    {{/unless}}
+			  {{/each}}
+			<hr>
+    </div>
+    <div class="col-5 chaos">
+      <h2>Galaxies in Chaos</h2>
+			<hr class="break">
+				{{#each burgers}}
+				<ul>
+			    {{#if this.devoured}}
+			      	{{!-- {{this.id}} --}}
+			        {{this.burger_name}}
+			    {{/if}}
+				</ul>
+			  {{/each}}
+				<hr>
   </div>
+</div>
 
-  <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Not Eaten
-  </div>
+	<div class="row spawn">
+	    <div class="center col-sm-12">
 
-  <button type="submit">Add Burger</button>
-</form>
+			<h2>Spawn a Galaxy</h2>
+
+			<form class="create-update-form" action="/" method="POST">
+
+			  <div class="form-group">
+			    <p>Create the big bang, and spawn a galaxy!</p>
+			    <input type="text" id="ca" name="burger_name">
+          
+			  </div>
+			  <button class="btn-primary" type="submit" onclick="PlaySound('./assets/wav/boom_wav.wav');">BOOM!</button>
+			</form>
+	    </div>
+	
+  	</div>
+</div>
